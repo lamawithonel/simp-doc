@@ -23,6 +23,10 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 changelog_name = 'Changelog.rst'
 changelog = os.path.join(basedir, '..', changelog_name)
 
+with open(os.path.join(basedir, 'things.rst'), 'w') as f:
+    for key in os.environ.keys():
+        f.write("| " + key + " => " + os.environ[key] + "\n")
+
 target_dirs = [
     'common'
 ]
@@ -353,3 +357,4 @@ pdf_stylesheets = ['sphinx','kerning','letter']
 tags.add('simp_%s' % version.split('.')[0])
 
 rst_epilog = "\n".join(epilog)
+

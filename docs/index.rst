@@ -23,6 +23,7 @@ Contents:
   Security Control Mapping <security_mapping/index>
   license
   help
+  things
 
 Indices and tables
 ------------------
